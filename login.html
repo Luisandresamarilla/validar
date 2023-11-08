@@ -57,8 +57,11 @@
           }
 
           if (registroEncontrado) {
-            // Redirigir a alumnos.html con el ID del registro como parámetro en la URL
-            window.location.href = "alumnos.html?id=" + encodeURIComponent(registroId);
+            // Guardar el ID del registro en el almacenamiento local
+            localStorage.setItem("registroId", registroId);
+
+            // Redirigir a alumnoscookies.html
+            window.location.href = "alumnoscookies.html";
           } else {
             alert("Credenciales inválidas. Por favor, intenta nuevamente.");
           }
